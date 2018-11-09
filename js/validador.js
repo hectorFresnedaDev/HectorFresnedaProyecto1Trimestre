@@ -59,6 +59,6 @@ function validarDni(){
 function validarDir(){
     var direccion=document.formFactura.direccion;
     if(direccion.lenght<=0){
-        error("");
+        error("No puedes dejar este campo vacio",document.getElementById("divDireccion"));
     }
 }
