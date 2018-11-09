@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/validador.js"></script>
+    <script src="js/Producto.js"></script>
+    <script src="js/Factura.js"></script>
+    <title>TITULO(MODIFICAR)</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class=formulario>
+            <form action="" name="formFactura">
+                <div id="divNombre">
+                    <Label for="nombre">
+                        Nombre:
+                    </Label>
+                    <input type="text" required placeholder="Nombre" name="nombre" id="nombre">
+                </div>
+                <div id="divDni">
+                    <Label for="dni">
+                        DNI:
+                    </Label>
+                    <input type="text" required name="dni" placeholder="DNI" id="dni" maxlength="9"><br><br></div>
+                <div id="divDireccion">
+                    <Label for="direccion">
+                        Dirección:
+                    </Label>
+                    <input type="text" required name="direccion" placeholder="Dirección" id="direccion"><br><br></div>
+                <div id="divTelefono">
+                    <Label for="telefono">
+                        Telefono:
+                    </Label>
+
+                    <input type="text" required name="telefono" placeholder="Teléfono" id="telefono"><br><br></div>
+                <div id="divEmail">
+                    <Label for="email">
+                        E-Mail:
+                    </Label>
+                    <input type="text" required name="email" placeholder="E-Mail" id="email"><br><br></div>
+                <div id="divNombreProveedor">
+                    <Label for="nomProveedor">
+                        Nombre del Proveedor:
+                    </Label>
+                    <input type="text" required name="nomProveedor" placeholder="Nombre del proveedor" id="nomProveedor"><br><br></div>
+                <div id="divCifProveedor">
+                    <Label for="cifProveedor">
+                        CIF del proveedor:
+                    </Label>
+                    <input type="text" required name="cifProveedor" placeholder="CIF del proveedor" id="cifProveedor"><br><br></div>
+                <div id="divDireccionProveedor">
+                    <Label for="dirProveedor">
+                        Dirección del proveedor:
+                    </Label>
+                    <input type="text" required name="dirProveedor" placeholder="Dirección del proveedor" id="dirProveedor"><br><br></div>
+                <div id="divEmailProveedor">
+                    <Label for="emailProveedor">
+                        E-Mail del proveedor:
+                    </Label>
+                    <input type="text" required name="emailProveedor" placeholder="E-Mail del proveedor" id="emailProveedor"><br><br></div>
+                <div id="divNumFactura">
+                    <Label for="numFactura">
+                        Número de factura:
+                    </Label>
+                    <input type="number" required name="numFactura" placeholder="Numúmero de factura" id="numFactura"><br><br></div>
+                <div id="divFecha">
+                    <Label for="fecha">
+                        Fecha:
+                    </Label>
+                    <input type="date" required name="fecha" id="fecha">
+                </div>
+                    <div id="productos" class="productos">
+                        <p>Producto</p><br>
+                        <label for="descripcion">Descripción:</label><br>
+                        <textarea required name="descripcion" id="descripcion" cols="40" rows="6"></textarea><br><br>
+                        <label for="unidades">Unidades del producto:</label>
+                        <input required type="number" placeholder="Unidades" name="unidades" id="unidades"><br><br>
+                        <label for="precio">Precio unitario:</label>
+                        <input required type="number" placeholder="Precio unitario" name="precio" id="precio"><br><br>
+                        <input type="button" value="Agregar producto" onclick="agregarProducto();"><br>
+                    </div>
+                    <label for="iva">IVA a aplicar</label>
+                    <input required type="number" placeholder="IVA" name="iva" id="iva"><br>
+
+                    <input  type="button" value="Validar" onclick="validar();">
+                    <input  type="button" value="Generar factura" disabled id="botonGenerar" onclick="generar();">
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
